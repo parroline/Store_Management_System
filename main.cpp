@@ -2,7 +2,6 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-using namespace std;
 
 int main(){
     Store store;
@@ -10,49 +9,49 @@ int main(){
     int choice;
 
     do{
-        cout << string(50, '=') << endl;
-        cout << right << setw(33) << "STORE MANAGEMENT" << endl;
-        cout << string(50, '-') << endl;
-        cout << "1. Add Product" << endl;
-        cout << "2. Update Product" << endl;
-        cout << "3. Delete Product" << endl;
-        cout << "4. Search Product" << endl;
-        cout << "5. Show Products" << endl << endl;
-        cout << "6. Sell Product" << endl << endl;
-        cout << "7. Show Bills" << endl << endl;
-        cout << "8. Statistics" << endl << endl;
-        cout << "9. Clear All Products" << endl;
-        cout << "0. Exit" << endl;
-        cout << string(50, '-') << endl;
+        std::cout << std::string(50, '=') << std::endl;
+        std::cout << std::right << std::setw(33) << "STORE MANAGEMENT" << std::endl;
+        std::cout << std::string(50, '-') << std::endl;
+        std::cout << "1. Add Product" << std::endl;
+        std::cout << "2. Update Product" << std::endl;
+        std::cout << "3. Delete Product" << std::endl;
+        std::cout << "4. Search Product" << std::endl;
+        std::cout << "5. Show Products" << std::endl << std::endl;
+        std::cout << "6. Sell Product" << std::endl << std::endl;
+        std::cout << "7. Show Bills" << std::endl << std::endl;
+        std::cout << "8. Statistics" << std::endl << std::endl;
+        std::cout << "9. Clear All Products" << std::endl;
+        std::cout << "0. Exit" << std::endl;
+        std::cout << std::string(50, '-') << std::endl;
         
-        cout << "Choose: ";
-        cin >> choice;
+        std::cout << "Choose: ";
+        std::cin >> choice;
         int id;
-        cout << endl;
+        std::cout << std::endl;
         switch (choice){
             case 1:
                 store.addProduct();
                 break;
             case 2:
-                cout << "ID: ";
-                cin >> id;
+                std::cout << "ID: ";
+                std::cin >> id;
 
                 store.updateProduct(id);
                 break;
             case 3:
-                cout << "ID: ";
-                cin >> id;
+                std::cout << "ID: ";
+                std::cin >> id;
 
                 store.deleteProduct(id);
                 break;
             case 4:
-                cout << "ID: ";
-                cin >> id;
+                std::cout << "ID: ";
+                std::cin >> id;
 
                 store.searchProduct(id);
                 break;
             case 5:
-                cout << endl;
+                std::cout << std::endl;
                 store.showProducts();
                 break;
             case 6:
@@ -67,11 +66,11 @@ int main(){
                 store.clearProducts();
                 break;
             case 0:
-                cout << "Exited." << endl;
+                std::cout << "Exited." << std::endl;
                 break;
             default:
-                cout << "Invalid Choice." << endl;
+                std::cout << "Invalid Choice." << std::endl;
         }
-        cout << string(50, '=') << endl << endl;
+        std::cout << std::string(50, '=') << std::endl << std::endl;
     } while(choice != 0);
 }
